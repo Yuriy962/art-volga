@@ -1,0 +1,25 @@
+.btn{
+    padding: 30px 44px;
+    color: #fff;
+    border-radius: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 17px;
+    border: 0;
+    background: linear-gradient(83.46deg, #DD4492 5.87%, #735184 97.76%);
+    &:hover{
+        background: $selected;
+        color: #fff;
+    }
+    &--callback{
+        padding: 15px 24px;
+        color: $accent;
+        border: 2px solid #735184;
+        background: #EBEAEB;
+        font-size: 14px;
+    }
+
+    &--dark{
+        
+    }
+}

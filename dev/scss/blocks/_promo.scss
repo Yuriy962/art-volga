@@ -1,0 +1,25 @@
+.promo{
+    min-height: 924px;
+    background: #EBEAEB;
+    background: url('../img/promo.jpg') center center/cover no-repeat;
+    position: relative;
+    &__inner{
+        padding: 170px 0 135px;
+    }
+    &__list{
+        margin-top: 45px;
+        margin-bottom: 3rem;
+    }
+    &__item{
+        line-height: 150%;
+    }
+    &__icon{
+        width: 48px;
+        height: 47.5px;
+        background: url('../img/check.svg') center center no-repeat;
+        margin-bottom: 20px;
+    }
+    &__btn{
+        margin-top: 35px;
+    }
+}
