@@ -1,0 +1,73 @@
+.contacts{
+    z-index: 0;
+    &__inner{
+        min-height: 565px;
+        padding: 114px 0;
+    }
+    &__info{
+        position: relative;
+        z-index: 1;
+        padding: 40px 36px 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 40px rgba(202, 202, 208, 0.2);
+        border-radius: 18px;
+        max-width: 469px;
+    }
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__item{
+        margin-bottom: 19px;
+        position: relative;
+        padding-left: 44px;
+        &:before{
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    &__phone{
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: 0.02em;
+        &:before{
+            content: url('../icons/phone.svg');
+        }
+    }
+    &__mail{
+        font-size: 19px;
+        &:before{
+            content: url('../icons/mail.svg');
+        }
+    }
+    &__address{
+        &:before{
+            content: url('../icons/pin-alt.svg');
+        }
+    }
+    &__time{
+        letter-spacing: 0.015em;
+        &:before{
+            content: url('../icons/clock.svg');
+        }
+    }
+}
+
+#YaMaps{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+.ymaps-2-1-79-ground-pane{
+    filter: grayscale(100%);
+}
+
+address{
+    margin: 0;
+}

@@ -1,4 +1,5 @@
 .btn{
+    cursor: pointer;
     padding: 30px 44px;
     color: #fff;
     border-radius: 16px;
@@ -18,8 +19,31 @@
         background: #EBEAEB;
         font-size: 14px;
     }
-
-    &--dark{
-        
+    &--small{
+        font-size: 16px;
+        padding: 16px 44px;
+    }
+    &--middlesize{
+        padding: 22px 44px;
+    }
+    &--price{
+        padding: 27px 70px 27px 44px;
+        font-size: 17px;
+    }
+    &--download{
+        position: relative;
+        &:before{
+            content: url('../img/download.svg');
+            position: absolute;
+            right: 2.5em;
+            top: 45%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 15px;
+        }
+    }
+    &--white{
+        background: #fff;
+        color: #735184;
     }
 }

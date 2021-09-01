@@ -25,6 +25,7 @@ body{
 	font-weight: normal;
 	position: relative;
 	background-color: #E5E5E5;
+	color: #37373E;;
 }
 
 
@@ -35,6 +36,9 @@ body{
 @import 'blocks/header';
 @import 'blocks/promo';
 @import 'blocks/stuff';
+@import 'blocks/price';
+@import 'blocks/site';
+@import 'blocks/contacts';
 
 @import 'blocks/footer';
 
@@ -55,6 +59,14 @@ a{
 	}
 }
 
+input{
+	border: none;
+	&:focus{
+		border: none;
+		outline: none;
+	}
+}
+
 .phone{
 	color: $link;
 	font-size: 22px;
@@ -65,6 +77,9 @@ a{
 	&--main{
 		font-size: 68px;	
 		letter-spacing: 0.01em;
+	}
+	&--small{
+		font-size: 32px;
 	}
 	color: $accent;
 	font-size: 54px;
@@ -103,5 +118,56 @@ a{
 	}
 	to {
 		bottom: 20px;
+	}
+}
+
+.form{
+	&__input{
+		height: 72px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 16px;
+		font-size: 24px;
+	}
+}
+
+
+.timer{
+	max-width: 471px;
+	display: flex;
+	justify-content: space-between;
+	&__box{
+		font-size: 68px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 16px;
+		width: 128px;
+		height: 112px;
+	}
+	&__item{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&:after{
+			content: '\3A';
+			font-size: 32px;
+			color: #fff;
+			display: block;
+			position: absolute;
+			top: 28px;
+			right: -26px;
+		}
+		&--name{
+			font-size: 24px;
+			margin-top: 10px;
+		}
+
+		&:last-child{
+			&:after{
+				content: none;
+			}
+		}
 	}
 }

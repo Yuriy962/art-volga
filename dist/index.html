@@ -71,53 +71,185 @@
 </section>
 <section class="stuff">
     <div class="stuff__inner">
+        <h2 class="title text-center">Наши специалисты</h2>
         <div class="container">
-            <div class="row ml-0 mr-0">
-                <article class="col-lg-4 stuff__item">
-                    <header class="stuff__img">
-                        <img src="img/stuff.png" alt="">
-                    </header>
-                    <footer class="stuff__info">
-                        <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
-                        <div class="text">Репродуктолог</div>
-                        <button class="btn">Записаться</button>
-                    </footer>
-                </article>
-
-                <article class="col-lg-4 stuff__item">
-                    <header class="stuff__img">
-                        <img src="img/stuff.png" alt="">
-                    </header>
-                    <footer class="stuff__info">
-                        <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
-                        <div class="text">Репродуктолог</div>
-                        <button class="btn">Записаться</button>
-                    </footer>
-                </article>
-
-                <article class="col-lg-4 stuff__item">
-                    <header class="stuff__img">
-                        <img src="img/stuff.png" alt="">
-                    </header>
-                    <footer class="stuff__info">
-                        <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
-                        <div class="text">Репродуктолог</div>
-                        <button class="btn">Записаться</button>
-                    </footer>
-                </article>
+            <div class="row stuff__list">
+                <div class="col-lg-4">
+                    <article class="stuff__item">
+                        <header class="stuff__img">
+                            <img src="img/stuff.png" alt="">
+                        </header>
+                        <footer class="stuff__info">
+                            <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
+                            <div class="text stuff__job">Репродуктолог</div>
+                            <button class="btn btn--small">Записаться</button>
+                        </footer>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="stuff__item">
+                        <header class="stuff__img">
+                            <img src="img/stuff.png" alt="">
+                        </header>
+                        <footer class="stuff__info">
+                            <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
+                            <div class="text stuff__job">Репродуктолог</div>
+                            <button class="btn btn--small">Записаться</button>
+                        </footer>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="stuff__item">
+                        <header class="stuff__img">
+                            <img src="img/stuff.png" alt="">
+                        </header>
+                        <footer class="stuff__info">
+                            <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
+                            <div class="text stuff__job">Репродуктолог</div>
+                            <button class="btn btn--small">Записаться</button>
+                        </footer>
+                    </article>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<section class="price">
+    <div class="price__inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 position-relative">
+                    <img class="position-absolute price__circle" src="img/circle.png" alt="circle">
+                    <img class="position-absolute price__circle price__circle--small" src="img/circle-small.png" alt="circle-small"> 
+
+                    <div class="price__img">
+                        <img src="img/pricelist.png" alt="price" class="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="price__info">
+                        <h2 class="title">
+                            Наши цены
+                        </h2>
+                        <div class="price__text text">
+                            <p>Для вашего удобства мы собрали цены на все наши услуги в одном файле. Если вы что-то не нашли или хотите уточнить конечную стоимость услуги, смело звоните нам. Всегда готовы помочь!</p>
+                            <p>Администратор ответит на любые Ваши вопросы по ценам, часам приема и свободному времени для записи.</p>
+                        </div>
+                        <button class="btn btn--price btn--download price__btn">Скачать прайс</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="site">
+    <div class="container">
+        <div class="site__wrapper">
+            <div class="site__inner text-white">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="site__info">
+                            <h2 class="title text-white">Наш сайт находится 
+                                в разработке</h2>
+                                <p class="text site__text">Мы готовы принять Вас и рассказать про наши услуги. <br>
+                                    Оставьте контакты — мы с Вами свяжемся</p>
+                                <form action="" class="site__form form" method="POST">
+                                    <div class="d-flex form__row site__form--row">
+                                        <input class="form__input site__input" type="tel" name="tel" id="tel" placeholder="+7 (___) ___-__-__">
+                                        
+                                        <input class="btn btn--middlesize btn--white" type="submit" value="Заказать звонок">
+                                    </div>
+                                    <div class="form__row site__form--row">
+                                        <label>
+                                            <input class="site__form--checkbox" type="checkbox" name="" id="">
+                                            <span>Ввод номера телефона подтверждает ваше согласие с Политикой конфиденциальности</span>
+                                        </label>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="site__timer">
+                            <h3 class="title title--small text-white site__timer--title">До открытия основного<br> сайта осталось</h3>
+                            <div class="timer">
+                                <div class="timer__item">
+                                    <span class="timer__box" id="days">94</span>
+                                    <p class="timer__item--name">
+                                        дня
+                                    </p>
+                                </div>
+                                <div class="timer__item">
+                                    <span class="timer__box" id="hours">12</span>
+                                    <p class="timer__item--name">
+                                        часов
+                                    </p>
+                                </div>
+                                <div class="timer__item">
+                                    <span class="timer__box" id="minutes">20</span>
+                                    <p class="timer__item--name">
+                                        минут
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contacts  position-relative">
+    <div class="contacts__inner">
+        <div class="container position-relative">
+            <div class="contacts__info">
+                <h2 class="title title--small contacts__title">Контакты</h2>
+                <div class="phone contacts__phone contacts__item">
+                    <a href="tel:88462001719" class="link">8 (846) 200-17-19</a>
+                </div>
+                <div class="text mail contacts__mail contacts__item">
+                    <a href="mailto:ooo_inep@mail.ru" class="link">ooo_inep@mail.ru</a>
+                </div>
+                <address class="text address contacts__address contacts__item">
+                    443001 г. Самара, ул. Пушкина, д. 227
+                </address>
+                <time class="text time contacts__time contacts__item">
+                    пн-сб — с 8:00 до 20:00
+                </time>
+            </div>
+        </div>
+    </div>
+    <div id="YaMaps"></div>
+</section>
 
  </main>
  <footer class="footer">
-
+    <div class="footer__inner text-white">
+      <div class="container">
+        <div class="row m-0 justify-content-between align-items-center">
+          <div class="logo footer__logo">
+            <img src="img/logo--white.png" alt="">
+          </div>
+          <div class="footer__contacts col-lg-3">
+            <p>ООО ИНЕП</p>
+            <p>ИНН/КПП: 6317151218/ 631701001</p>
+            <p>ОГРН: 1206300071988</p>
+            <p>Лицензии: ОО-00-00-000000</p>
+          </div>
+          <div class="footer__text text-white col-lg-3">
+            Вся представленная на сайте информация носит информационный характер и 
+            не является публичной офертой
+          </div>
+          <div class="footer__links text-white col-lg-3">
+            <a href="" class="policy">Политика конфиденциальности</a>
+            <p>Создание сайтов - <a href="https://seoprostor.ru" class="author">SEO Простор</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
  </footer>
 
  
    <script src="js/libs.min.js"></script>  
-   <script src="js/lazyload.js"></script>
    <script src="js/all.min.js"></script>
  </body>
  </html>

@@ -1,0 +1,31 @@
+.price{
+    &__inner{
+        padding: 44px 0 63px;
+    }
+    &__info{
+        padding-left: 42px;
+    }
+    &__img{
+        padding-top: 20px;
+    }
+    &__text{
+        margin-top: 20px;
+        margin-bottom: 27px;
+        p{
+            margin-bottom: 1.3rem;
+        }
+    }
+    &__btn{
+        margin-top: 21px;
+    }
+
+
+    &__circle{
+        top: -84px;
+        right: 13.3%;
+        &--small{
+            top: 2%;
+            right: 2%;
+        }
+    }
+}
