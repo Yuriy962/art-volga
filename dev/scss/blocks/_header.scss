@@ -2,8 +2,13 @@
     &__inner{
         padding: 16px 0;
         width: 100%;
-        position: fixed;
+        position: absolute;
         z-index: 10;
+        transition: background-color .3s, box-shadow .3s;
+        &.position-fixed{
+            background-color: #fff;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+        }
     }
     &__logo{
         max-width: 390px;
@@ -14,5 +19,25 @@
     }
     &__phone{
         padding-right: 35px;
+    }
+
+    @media (max-width: 992px){
+        &__inner{
+            padding: 8px 0;
+        }
+        &__logo{
+            max-width: 135px;
+            max-height: 32px;
+        }
+        &__inner{
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        &__phone{
+            font-weight: 600;
+            padding-right: 0;
+        }
+        &__btn{
+            display: none;
+        }
     }
 }

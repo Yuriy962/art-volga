@@ -42,8 +42,10 @@ body{
 
 @import 'blocks/footer';
 
-.container{
-	max-width: 1425px;
+@media (min-width: 1450px){
+	.container{
+		max-width: 1425px;
+	}
 }
 
 a{
@@ -71,15 +73,33 @@ input{
 	color: $link;
 	font-size: 22px;
 	letter-spacing: 0.02em;
+	@media (max-width: 480px){
+		font-size: 17px;
+		letter-spacing: 0;
+	}
 }
 
 .title{
 	&--main{
 		font-size: 68px;	
 		letter-spacing: 0.01em;
+		@media (max-width: 1450px){
+			&--main{
+				font-size: 60px;
+			}
+		}
+		@media (max-width: 992px){
+
+		}
 	}
 	&--small{
 		font-size: 32px;
+		@media (max-width: 1450px){
+			font-size: 32px;
+		}
+	}
+	@media (max-width: 1450px){
+		font-size: 45px;
 	}
 	color: $accent;
 	font-size: 54px;
@@ -96,6 +116,7 @@ input{
 }
 
 .arrow{
+	position: relative;
 	&--down{
 		left: 0;
 		right: 0;
@@ -114,7 +135,7 @@ input{
 
 @keyframes up-down {
 	from {
-		bottom: 36px;
+		bottom: 50px;
 	}
 	to {
 		bottom: 20px;
@@ -127,6 +148,11 @@ input{
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 16px;
 		font-size: 24px;
+	}
+	@media (max-width: 1450px){
+		&__input{
+			font-size: 19px;
+		}
 	}
 }
 
@@ -167,6 +193,31 @@ input{
 		&:last-child{
 			&:after{
 				content: none;
+			}
+		}
+	}
+
+	@media (max-width: 1450px){
+		&__item{
+			&--name{
+				margin-top: 5px;
+			}
+			&:after{
+				right: -20px;
+			}
+		}
+		&__box{
+			font-size: 60px;
+			width: 100px;
+			height: 100px;
+		}
+	}
+	@media (max-width: 1200px){
+		max-width: 350px;
+		&__item{
+			&:after{
+				right: -20%;
+				transform: translateX(-50%);
 			}
 		}
 	}
