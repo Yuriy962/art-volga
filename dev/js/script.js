@@ -58,6 +58,48 @@ $(window).on('scroll', function() {
 function showYaMaps(){
     var script   = document.createElement("script");
     script.type  = "text/javascript";
-    script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A82920c56939f77f29a249023d91c64d8701986b37edaa0caca142cba0fa74f1c&amp;width=100%25&amp;height=565&amp;lang=ru_RU&amp;scroll=true";
+    script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A82920c56939f77f29a249023d91c64d8701986b37edaa0caca142cba0fa74f1c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true";
     document.getElementById("YaMaps").appendChild(script);
 }
+
+
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+ 
+function initializeClock(id, endtime) {
+  var clock = document.querySelector(id);
+  var daysSpan = clock.getElementById('#days');
+  var hoursSpan = clock.getElementById('#hours');
+  var minutesSpan = clock.getElementById('#minutes');
+ 
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+ 
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+ 
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+ 
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+ 
+var deadline = new Date(Date.parse(new Date()) + 94 * 12 * 20 * 1000); // for endless timer
+initializeClock('timer', deadline);

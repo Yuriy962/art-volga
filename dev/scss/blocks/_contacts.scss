@@ -54,6 +54,23 @@
             content: url('../icons/clock.svg');
         }
     }
+    @media (max-width: 576px){
+        &__inner{
+            padding: 46px 0 114px;
+            min-height: 583px;
+        }
+        &__title{
+            font-size: 18px !important;
+            margin-bottom: 22px;
+        }
+        &__info{
+            max-width: 280px;
+            padding: 28px 20px 50px 36px;
+        }
+        &__item{
+            margin-bottom: 23px;
+        }
+    }
 }
 
 #YaMaps{

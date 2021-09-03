@@ -13,12 +13,16 @@
     }
     &__item{
         line-height: 150%;
+        margin-bottom: 20px;
     }
     &__icon{
-        width: 48px;
-        height: 47.5px;
-        background: url('../img/check.svg') center center no-repeat;
-        margin-bottom: 20px;
+        display: inline-block;
+        &::before{
+            content: url('../img/check.svg');
+            width: 48px;
+            height: 47.5px;
+            display: inline-block;
+        }
     }
     &__img{
         img{
@@ -53,4 +57,32 @@
             align-items: flex-start;
         }
     }     
+    @media (max-width: 768px){
+        &__list{
+            margin-top: 20px;
+        }
+        &__icon{
+            margin-right: 40px;
+            &::before {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    @media (max-width: 576px){
+        background: url('../img/promo-mobile.jpg') center center/cover no-repeat;
+        min-height: 700px;
+        &__inner{
+            padding: 75px 5px 56px;
+        }
+        &__btn{
+            font-size: 15px;
+            padding: 25px 30px;
+        }
+    }
+    @media (max-width: 480px){
+        &__btn{
+            margin-top: 60px;
+        }
+    }
 }

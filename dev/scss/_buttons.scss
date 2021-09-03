@@ -25,16 +25,28 @@
     &--small{
         font-size: 16px;
         padding: 16px 44px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+            padding: 12px 30px;
+        }
     }
     &--middlesize{
         padding: 22px 44px;
         @media (max-width: 1200px){
             max-width: 226px;
         }
+        @media (max-width: 576px){
+            font-size: 15px;
+            padding: 22px 40px;
+        }
     }
     &--price{
         padding: 27px 70px 27px 44px;
         font-size: 17px;
+        @media (max-width: 992px){
+            width: 280px;
+            text-align: center;
+        }
     }
     &--download{
         position: relative;

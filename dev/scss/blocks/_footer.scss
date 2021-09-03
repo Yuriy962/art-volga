@@ -68,4 +68,37 @@
             align-items: center;
         }
     }
+    @media (max-width: 576px){
+        &__logo{
+            max-width: 270px;
+            padding: 0;
+        }
+        &__item{
+            text-align: center;
+        }
+        &__text{
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        &__contacts{
+            margin-bottom: 14px;
+            p{
+                margin-bottom: 0px;
+            }
+        }
+        &__links{
+            min-height: auto;
+            margin-bottom: 0;
+            .policy{
+                margin-top: 10px;
+                margin-bottom: 13px;
+            }
+        }
+    }
+}
+
+.p-sm-0{
+    @media (max-width: 576px){
+        padding: 0;
+    }
 }
