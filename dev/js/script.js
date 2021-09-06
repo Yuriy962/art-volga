@@ -1,4 +1,3 @@
-
 $(window).on('load', () => {
 
     var header = document.querySelector('.header__inner');
@@ -63,17 +62,55 @@ function showYaMaps(){
 }
 
 
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
+
+
+
+// countdown
+// Берём элемент для вывода таймера
+let timer__show = document.querySelector('#timer');
+let timer__days = timer__show.querySelector('#days');
+let timer__hours = timer__show.querySelector('#hours');
+let timer__minutes = timer__show.querySelector('#minutes');
+
+// функция для вычисления разности времени
+function diffSubstract(date1, date2) {
+    return date2 - date1;
 }
+
+let end_date = {
+    full_year: '2021', // год
+    month: '11', // месяц
+    day: '21', // день
+    hours: '21', // час
+    minutes: '00', // минута
+    seconds: '00' // секунда
+}
+
+// Запуск интервала таймера
+timer = setInterval(function () {
+    // Получение времени сейчас
+    let now = new Date();
+    //Получение заданного времени
+    let date = new Date(`${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`);
+    // Вычисление разницы времени
+    let ms_left = diffSubstract(now, date);
+    
+    // Получаем время зависимое от разницы
+    let res = new Date(ms_left);
+    // Делаем строки для вывода
+    // Если разница времени меньше или равна нулю
+    if(ms_left <= 0) {
+        // Выключаем интервал
+        timer__days.innerHTML = `00`;
+        timer__hours.innerHTML = `00`;
+        timer__minutes.innerHTML = `00`;
+        clearInterval(timer);
+    } else {        
+        let str_days = `${res.getUTCDay()}`;
+        let str_hours = `${res.getUTCHours()}`;
+        let str_minutes = `${res.getUTCMinutes()}`;
+        timer__days.innerHTML = str_days;
+        timer__hours.innerHTML = str_hours;
+        timer__minutes.innerHTML = str_minutes;
+    }
+}, 1000);
