@@ -34,13 +34,44 @@
 
     <div class="" style="display:none">
       <div class="popup">
-        <form action="" class="form">
-          <h2 class="title"></h2>
-          <h3 class="subtitle"></h3>
-          <div class="form__row">
-
+        <form action="" class="form popup-form" id="callback">
+          <h2 class="title text-center">Заказать звонок</h2>
+          <p class="text text-center popup-form__text">Оставьте контакты и мы с Вами свяжемся</p>
+          <div class="form__row popup-form__row popup-form__col--mobile">
+            <input class="form__input popup-form__input" type="text" name="" id="" placeholder="Ваше имя">
+            <input class="form__input popup-form__input" type="tel" name="" id="" placeholder="Номер телефона">
           </div>
-          
+          <div class="form__row popup-form__row">
+            <label class="policy">
+                <input class="form__checkbox form-popup__checkbox" type="checkbox" name="agreement" id="checkbox-popup-1">
+                <span>Ввод номера телефона подтверждает ваше согласие с <a href="" class="link link--underlined">Политикой конфиденциальности</a></span>
+            </label>
+          </div>
+          <div class="text-center">
+              <input class="btn btn--middlesize form-popup__btn" type="submit" value="Заказать звонок">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="" style="display:none">
+      <div class="popup">
+        <form action="" class="form popup-form" id="order">
+          <h2 class="title text-center">Записаться на консультацию</h2>
+          <p class="text text-center popup-form__text">Оставьте контакты и мы с Вами свяжемся</p>
+          <div class="form__row popup-form__row popup-form__col--mobile">
+            <input class="form__input popup-form__input" type="text" name="" id="" placeholder="Ваше имя">
+            <input class="form__input popup-form__input" type="tel" name="" id="" placeholder="Номер телефона">
+          </div>
+          <div class="form__row popup-form__row">
+            <label class="policy">
+                <input class="form__checkbox form-popup__checkbox" type="checkbox" name="agreement" id="checkbox-popup-2">
+                <span>Ввод номера телефона подтверждает ваше согласие с <a href="" class="link link--underlined">Политикой конфиденциальности</a></span>
+            </label>
+          </div>
+          <div class="text-center">
+              <input class="btn btn--middlesize form-popup__btn" type="submit" value="Отправить заявку">
+          </div>
         </form>
       </div>
     </div>

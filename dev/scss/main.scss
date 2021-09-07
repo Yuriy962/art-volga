@@ -59,6 +59,9 @@ a{
 	&:hover{
 		text-decoration: none;
 	}
+	&--underlined{
+		text-decoration: underline;
+	}
 }
 
 input{
@@ -245,4 +248,92 @@ input{
 			font-size: 17px;
 		}
 	}
+}
+
+
+.popup{
+	&-form{
+		font-size: 14px;
+		margin-top: 85px;
+		padding: 4rem 2.5rem;
+		box-shadow: 0px 5px 40px rgba(202, 202, 208, 0.2);
+		border-radius: 18px;
+		min-height: 546px;
+		&__input{
+			padding: 17px 19px;
+			border-radius: 16px;
+			font-size: 19px;
+			color: #979797;
+			border: 1px solid #C4C4C4;
+			width: 47.5%;
+			&:focus{
+				border: 1px solid #C4C4C4;
+			}
+		}
+		&__row{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin: 3.5em 0 3em;
+		}
+		&__text{
+			margin: 1em 0;
+		}
+		&__checkbox{
+			width: 17px;
+			height: 18px;
+		}
+		.policy span{
+			display: inline-block;
+			flex-wrap: nowrap;
+			margin-left: 10px;
+		}
+		.btn{
+			padding: 0;
+			width: 251px;
+			height: 80px;
+		}
+
+		@media (max-width: 768px){
+			font-size: 12px;
+			min-height: 470px;
+			width: calc( 100% - 40px );
+			&__input{
+				margin: .5em 0;
+			}
+			&__row{
+				margin: 1.5em 0 2em;
+			}
+			.policy{
+				display: flex;
+			}
+			.policy span{
+				font-size: 13px;
+			}
+		}
+		@media (max-width: 576px){
+			padding: 4rem 1.5rem 3rem;
+			&__input{
+				width: 100%;
+				font-size: 16px;
+			}
+			&__col--mobile{
+				flex-direction: column;
+			}
+		}
+		@media (max-width: 480px){
+			width: calc(100% - 15px);
+			.btn{
+				width: 200px;
+				height: 70px;
+			}
+		}
+	}
+
+}
+
+.fancybox-slide--html .fancybox-close-small{
+	padding: 3px;
+    right: 4px;
+    top: 13px;
 }
