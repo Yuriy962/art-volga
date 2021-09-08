@@ -6,31 +6,18 @@ require '/home/s/seotest/art-volga/public_html/phpmailer/Exception.php';
 
 $name = $_POST['name'];
 $phone = $_POST['tel'];
-$email = $_POST['email'];
-$radio1 = $_POST['radio-1'];
-$radio2 = $_POST['radio-2'];
-$radio3 = $_POST['radio-3'];
+$doctor = $_POST['doctor'];
 
 // Формирование самого письма
 $title = "Новая заявка с формы сайта ART VOGLA - Клинка Вспомогательных Репродуктивных Технологий";
 $body = "
 <h2>Новая заявка с формы сайта  ART VOGLA - Клинка Вспомогательных Репродуктивных Технологий</h2>
+<b>Имя:</b> ".$name."<br>
 <b>Телефон:</b> ".$phone."<br>
 ";
-
-// if(!empty($radio1) && !empty($radio2) && !empty($radio3)) {
-//  $body = "
-//     <h2>Новая заявка с квиза  Фундамент-Волга</h2>
-//     <p> Из какого материала планируете строить дом? -> ".$radio1."</p>
-//     <p> У Вас есть геология участка под строительство? -> ".$radio2."</p>
-//     <p> Как далеко соседские дома и постройки от предполагаемого места для дома -> ".$radio3."</p>
-//     <p><b>Телефон:</b> ".$phone."<br></p>
-//     ";
-    
-//  $text = 'Из какого материала планируете строить дом: '.$radio1."\r\n";
-//  $text .= 'У Вас есть геология участка под строительство: '.$radio2."\r\n";
-//  $text .= 'Как далеко соседские дома и постройки от предполагаемого места для дома: '.$radio3."\r\n";
-// }
+if(empty($doctor)){
+    $body = $body."<b>Записан(а) к:".$doctor."</b>";
+}
 
 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -49,7 +36,7 @@ try {
     $mail->Port       = 465;
     $mail->setFrom('buranov@seoprostor.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
-    $mail->addAddress('');
+    
     // $mail->addAddress('director@seoprostor.ru');
     $mail->addAddress('buranov@seoprostor.ru');
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если надо
@@ -58,20 +45,6 @@ try {
     $mail->isHTML(true);
     $mail->Subject = $title;
     $mail->Body = $body;    
-
-    // $amocrm = new Amocrm();
-	// $amocrm->auth();
-	// $Response = $amocrm->addLead('Заявка с сайта');
-
-	// if(!empty($Response['_embedded']['items'][0]['id'])){
-	// 	$leadsId = array($Response['_embedded']['items'][0]['id']);
-
-	// 	$Response = $amocrm->addContact('', $phone, $leadsId);
-		
-	// 	if(!empty($text)){
-    // 		$Response = $amocrm->addNotes($text, $leadsId[0]);
-	// 	}
-	// }
 
     // Проверяем отравленность сообщения
     if ($mail->send()) {$result = "success";} 

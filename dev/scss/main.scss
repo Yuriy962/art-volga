@@ -58,6 +58,7 @@ a{
 	color: #37373E;
 	&:hover{
 		text-decoration: none;
+		color: #dd4492;
 	}
 	&--underlined{
 		text-decoration: underline;
@@ -69,6 +70,9 @@ input{
 	&:focus{
 		border: none;
 		outline: none;
+	}
+	&[disabled]{
+		background-color: #e5e5e5;
 	}
 }
 
@@ -336,4 +340,21 @@ input{
 	padding: 3px;
     right: 4px;
     top: 13px;
+}
+
+.form-messages{
+	position: relative;
+    font-size: 15px;
+    bottom: 0px;
+	text-align: center;
+
+}
+.form-message{
+	display: none;
+	&--success{
+		color: #16a600;
+	}
+	&--error{
+		color: #eb1338;
+	}
 }

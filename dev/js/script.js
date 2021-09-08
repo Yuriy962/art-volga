@@ -21,50 +21,74 @@ $(window).on('load', () => {
 
 
     // Отправка формы
-    // $("form").on("submit", (function (e) {
-    //     e.preventDefault();
-    //     let form = $(this);
-    //     return $.ajax({
-    //         type: "POST",
-    //         url: "../send.php",
-    //         data: $(this).serialize(),
-    //         success: function (e) {
-    //             e = JSON.parse(e);
-    //             console.log(e.result);
-    //             if("success" === e.result){
-    //                 form.find('.form-message--success').css('display', 'block');
-    //             }else{
-    //                 form.find('.form-message--error').css('display', 'block');
-    //             }
-    //             form.find("input[type='name'], input[type='tel'], textarea").val("").val(""), $("form").trigger("reset");
-    //         }
-    //     });
-    // }));
+    $("form").on("submit", (function (e) {
+        e.preventDefault();
+        let form = $(this);
+        let formData = $(this).serialize();
+        let inputDoctor = form.find('input[name="doctor"]');
+        if(inputDoctor.length > 0){
+            formData += '&doctor=' + inputDoctor.val();
+        }
+        return $.ajax({
+            type: "POST",
+            url: "../send.php",
+            data: formData,
+            success: function (e) {
+                e = JSON.parse(e);
+                console.log(e.result);
+                if("success" === e.result){
+                    form.find('.form-message--success').css('display', 'block');
+                }else{
+                    form.find('.form-message--error').css('display', 'block');
+                }
+                form.find("input[type='name'], input[type='tel'], input[name='doctor']").val("").val(""), $("form").trigger("reset");
+            }
+        });
+    }));
 
     $().fancybox();
 
     $('input[type="tel"]').inputmask('+7 (999) 999-99-99');
+
+    $('.stuff .btn').on('click', function () {
+        let doctorName = $(this).parent().find('.stuff__name').text();
+        $('#order').find('input[name="doctor"]').val(doctorName);
+    });
 });
 
 // Map
-YaMapsShown = false; 
-$(window).on('scroll', function() {
-    if (!YaMapsShown){
-        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {      
-        showYaMaps();
-        YaMapsShown = true;
-        }
-    }
-});
-function showYaMaps(){
-    var script   = document.createElement("script");
-    script.type  = "text/javascript";
-    script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A82920c56939f77f29a249023d91c64d8701986b37edaa0caca142cba0fa74f1c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true";
-    document.getElementById("YaMaps").appendChild(script);
+// YaMapsShown = false; 
+// $(window).on('scroll', function() {
+//     if (!YaMapsShown){
+//         if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {      
+//         showYaMaps();
+//         YaMapsShown = true;
+//         }
+//     }
+// });
+
+
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map('YaMaps', {
+            center: [53.201823, 50.126729],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+    myMap.geoObjects.add(new ymaps.Placemark([53.201823, 50.126729], {
+        balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+    }, {
+        // preset: 'islands#icon',
+        // iconColor: '#0095b6',
+        iconLayout: 'default#image',
+        iconImageHref: 'img/mark.png',
+        // iconImageSize: [67, 81]
+    }));
 }
-
-
-
 
 
 // countdown
@@ -74,33 +98,33 @@ function getTimeRemaining(endtime) {
     var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
     var days = Math.floor(t / (1000 * 60 * 60 * 24));
     return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes
     };
-  }
+}
    
-  function initializeClock(id, endtime) {
+function initializeClock(id, endtime) {
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('#days');
     var hoursSpan = clock.querySelector('#hours');
     var minutesSpan = clock.querySelector('#minutes');
-   
+
     function updateClock() {
-      var t = getTimeRemaining(endtime);
+        var t = getTimeRemaining(endtime);
         
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-   
-      if (t.total <= 0) {
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+
+        if (t.total <= 0) {
         clearInterval(timeinterval);
-      }
+        }
     }
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
-  }
+}
    
-  var deadline = new Date(Date.parse(new Date(2021, 8, 7)) + 188 * 12 * 60 * 60 * 1000); // for endless timer
-  initializeClock('timer', deadline);
+var deadline = new Date(Date.parse(new Date(2021, 8, 7, 12, 20)) + 94 * 24 * 60 * 60 * 1000); // for endless timer
+initializeClock('timer', deadline);
