@@ -82,7 +82,7 @@
                             <img src="img/stuff.png" alt="">
                         </header>
                         <footer class="stuff__info">
-                            <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
+                            <h4 class="stuff__name">Гукасян Сергей <br> Норенци</h4>
                             <div class="text stuff__job">Репродуктолог</div>
                             <button data-doctor="first" data-src="#order" data-fancybox class="btn btn--small stuff__btn">Записаться</button>
                         </footer>
@@ -94,8 +94,8 @@
                             <img src="img/stuff.png" alt="">
                         </header>
                         <footer class="stuff__info">
-                            <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
-                            <div class="text stuff__job">Репродуктолог</div>
+                            <h4 class="stuff__name">Сафронова Елена <br> Валентиновна</h4>
+                            <div class="text stuff__job">Врач репродуктолог</div>
                             <button data-doctor="second" data-src="#order" data-fancybox class="btn btn--small stuff__btn">Записаться</button>
                         </footer>
                     </article>
@@ -106,8 +106,8 @@
                             <img src="img/stuff.png" alt="">
                         </header>
                         <footer class="stuff__info">
-                            <h4 class="stuff__name">Зайцева Ирина Ивановна</h4>
-                            <div class="text stuff__job">Репродуктолог</div>
+                            <h4 class="stuff__name">Зайцева Ирина <br> Ивановна</h4>
+                            <div class="text stuff__job">Врач репродуктолог</div>
                             <button data-doctor="third" data-src="#order" data-fancybox class="btn btn--small stuff__btn">Записаться</button>
                         </footer>
                     </article>
@@ -137,12 +137,12 @@
                             <p>Для вашего удобства мы собрали цены на все наши услуги в одном файле. Если вы что-то не нашли или хотите уточнить конечную стоимость услуги, смело звоните нам. Всегда готовы помочь!</p>
                             <p>Администратор ответит на любые Ваши вопросы по ценам, часам приема и свободному времени для записи.</p>
                         </div>
-                        <a href="" class="btn btn--price btn--download price__btn d-none d-lg-inline-block" download>Скачать
+                        <a href="/docs/prices_09-09-21.xlsx" class="btn btn--price btn--download price__btn d-none d-lg-inline-block" download>Скачать
                             прайс</a>
                     </div>
                 </div>
             </div>
-            <a href="" class="btn btn--price btn--download price__btn d-lg-none d-inline-block" download>Скачать
+            <a href="/docs/prices_09-09-21.xlsx" class="btn btn--price btn--download price__btn d-lg-none d-inline-block" download title="скачать файл">Скачать
                 прайс</a>
         </div>
     </div>
@@ -172,7 +172,7 @@
                                     </div>
                                     <div class="form__row site__form--row">
                                         <label>
-                                            <input class="site__form--checkbox" type="checkbox" name="agreement" id="agreement" required>
+                                            <input class="site__form--checkbox" type="checkbox" name="agreement" id="agreement" required checked>
                                             <span>Ввод номера телефона подтверждает ваше согласие с Политикой конфиденциальности</span>
                                         </label>
                                     </div>
@@ -246,7 +246,7 @@
             <p>ООО ИНЕП</p>
             <p>ИНН/КПП: 6317151218/ 631701001</p>
             <p>ОГРН: 1206300071988</p>
-            <p>Лицензии: ОО-00-00-000000</p>
+            <p>Лицензии: ЛО-63-01-005828</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-auto p-sm-0">
@@ -257,8 +257,8 @@
         </div>
         <div class="col-lg-3 col-md-6 col-auto">
           <div class="footer__item footer__links text-white">
-            <a href="" class="policy">Политика конфиденциальности</a>
-            <p>Создание сайтов - <a href="https://seoprostor.ru" class="author">SEO Простор</a></p>
+            <a data-fancybox href="#policy" class="policy popup">Политика конфиденциальности</a>
+            <p>Создание сайтов - <a href="https://seoprostor.ru" class="author" target="_blank">SEO Простор</a></p>
           </div>
         </div>
       </div>
@@ -283,8 +283,8 @@
           </div>
           <div class="form__row popup-form__row">
             <label class="policy">
-                <input class="form__checkbox form-popup__checkbox" type="checkbox" name="agreement" id="checkbox-popup-1" required>
-                <span>Ввод номера телефона подтверждает ваше согласие с <a href="" class="link link--underlined">Политикой конфиденциальности</a></span>
+                <input class="form__checkbox form-popup__checkbox" type="checkbox" name="agreement" id="checkbox-popup-1" required checked>
+                <span>Ввод номера телефона подтверждает ваше согласие с <a href="#policy" class="link link--underlined popup">Политикой конфиденциальности</a></span>
             </label>
           </div>
           <div class="text-center">
@@ -313,14 +313,39 @@
            </div>
           <div class="form__row popup-form__row">
             <label class="policy">
-                <input class="form__checkbox form-popup__checkbox" type="checkbox" name="agreement" id="checkbox-popup-2" required>
-                <span>Ввод номера телефона подтверждает ваше согласие с <a href="" class="link link--underlined">Политикой конфиденциальности</a></span>
+                <input class="form__checkbox form-popup__checkbox" type="checkbox" name="agreement" id="checkbox-popup-2" required checked>
+                <span>Ввод номера телефона подтверждает ваше согласие с <a data-fancybox href="#policy" data-fancybox class="link link--underlined popup">Политикой конфиденциальности</a></span>
             </label>
           </div>
           <div class="text-center">
               <input class="btn btn--middlesize form-popup__btn" type="submit" value="Отправить заявку">
           </div>
         </form>
+      </div>
+    </div>
+    
+    
+    <div class="" style="display:none">
+      <div class="popup--content" id="policy">
+        <div class="policy--body">
+          <p>Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года Вы подтверждаете свое согласие на обработку  ООО ИНЕП персональных данных: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, передачу исключительно в целях продажи программного обеспечения на Ваше имя, как это описано ниже, блокирование, обезличивание, уничтожение. </p>
+          <br>
+          <p>ООО ИНЕП гарантирует конфиденциальность получаемой информации. Обработка персональных данных осуществляется в целях эффективного</p> 
+          <br>
+          <p>исполнения заказов, договоров и иных обязательств, принятых ООО ИНЕП в качестве обязательных к исполнению. </p>
+          <br>
+          <p>В случае необходимости предоставления Ваших персональных данных правообладателю, дистрибьютору или реселлеру программного обеспечения в целях регистрации программного обеспечения на ваше имя, вы даёте согласие на передачу ваших персональных данных. ООО ИНЕП гарантирует, что правообладатель, дистрибьютор или реселлер программного обеспечения осуществляет защиту персональных данных на условиях, аналогичных изложенным в Политике конфиденциальности персональных данных.</p> 
+          <br>
+          <p>Настоящее согласие распространяется на следующие Ваши персональные данные: фамилия, имя и отчество, адрес электронной почты, почтовый адрес доставки заказов, контактный телефон, платёжные реквизиты. </p>
+          <br>
+          <p>Срок действия согласия является неограниченным. Вы можете в любой момент отозвать настоящее согласие, направив письменное уведомления на адрес:  443001 г. Самара, ул. Пушкина, д. 227 с пометкой «Отзыв согласия на обработку персональных данных». </p>
+          <br>
+          <p>Обращаем ваше внимание, что отзыв согласия на обработку персональных данных влечёт за собой удаление Вашей учётной записи с <a href="artvolga.site">Интернет-сайта</a>, а также уничтожение записей, содержащих ваши персональные данные, в системах обработки персональных данных ООО ИНЕП, что может сделать невозможным пользование интернет-сервисами ООО ИНЕП</p>
+          <br>
+          <p>Гарантирую, что представленная мной информация является полной, точной и достоверной, а также что при представлении информации не нарушаются действующее законодательство Российской Федерации, законные права и интересы третьих лиц. Вся представленная информация заполнена мною в отношении себя лично. </p>
+          <br>
+          <p>Настоящее согласие действует в течение всего периода хранения персональных данных, если иное не предусмотрено законодательством Российской Федерации.</p>
+        </div>
       </div>
     </div>
  

@@ -126,5 +126,5 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 1000);
 }
    
-var deadline = new Date(Date.parse(new Date(2021, 8, 7, 12, 20)) + 94 * 24 * 60 * 60 * 1000); // for endless timer
+var deadline = new Date(Date.parse(new Date(2021, 8, 9, 15, 37)) + 100 * 24 * 60 * 60 * 1000); // for endless timer
 initializeClock('timer', deadline);

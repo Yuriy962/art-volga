@@ -15,8 +15,8 @@ $body = "
 <b>Имя:</b> ".$name."<br>
 <b>Телефон:</b> ".$phone."<br>
 ";
-if(empty($doctor)){
-    $body = $body."<b>Записан(а) к:".$doctor."</b>";
+if(!empty($doctor)){
+    $body = $body."<b>Записан(а) к</b>:".$doctor."";
 }
 
 
@@ -37,9 +37,10 @@ try {
     $mail->setFrom('buranov@seoprostor.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
     
-    // $mail->addAddress('director@seoprostor.ru');
+    $mail->addAddress('director@seoprostor.ru');
     $mail->addAddress('buranov@seoprostor.ru');
-    // $mail->addAddress('youremail@gmail.com'); // Ещё один, если надо
+    $mail->addAddress('ooo_inep@mail.ru');
+    $mail->addAddress('Yura962Bur@mail.ru');
     
     // Отправка сообщения
     $mail->isHTML(true);
