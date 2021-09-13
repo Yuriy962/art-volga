@@ -1,5 +1,5 @@
 .promo{
-    min-height: 924px;
+    min-height: 880px;
     background: #EBEAEB;
     background: url('../img/promo.jpg') center center/cover no-repeat;
     position: relative;
@@ -71,7 +71,6 @@
     }
     @media (max-width: 576px){
         background: url('../img/promo-mobile.jpg') center center/cover no-repeat;
-        min-height: 700px;
         &__inner{
             padding: 75px 5px 56px;
         }
@@ -81,6 +80,7 @@
         }
     }
     @media (max-width: 480px){
+        min-height: 850px;
         &__btn{
             margin-top: 40px;
         }

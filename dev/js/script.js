@@ -79,7 +79,7 @@ function init () {
             searchControlProvider: 'yandex#search'
         });
 
-    myMap.geoObjects.add(new ymaps.Placemark([53.201823, 50.126729], {
+    myMap.geoObjects.add(new ymaps.Placemark([53.201709, 50.126451], {
         balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
     }, {
         // preset: 'islands#icon',

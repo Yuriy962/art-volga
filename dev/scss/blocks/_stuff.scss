@@ -21,11 +21,20 @@
         height: 330px;
         overflow: hidden;
         padding-top: 20px;
+        position: relative;
         img{
             object-fit: scale-down;
             object-position: top;
             width: 100%;
             height: 100%;
+        }
+        &:after{
+            content: url('../img/symbol.svg');
+            position: absolute;
+            width: 53px;
+            height: 53px;
+            top: 28px;
+            right: 24px;
         }
     }
     &__info{
