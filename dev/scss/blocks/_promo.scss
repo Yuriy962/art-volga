@@ -24,6 +24,9 @@
             display: inline-block;
         }
     }
+    &__text{
+        padding-right: 15px;
+    }
     &__img{
         img{
             width: 100%;
